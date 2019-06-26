@@ -1,5 +1,6 @@
 'use strict';
 
+import 'babel-polyfill';
 import './assets/style/viewport.less';
 import Application from '@js/app';
 import Base from '@js/config/base';
