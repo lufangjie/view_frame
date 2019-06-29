@@ -20,7 +20,7 @@ module.exports = {
         rules: [
             {test: /\.html$/, loader: 'html-loader', exclude: /node_modules/},
             {test: /\.htm$/, loader: 'string-loader',include:  [path.resolve(__dirname,'src/template')], exclude: /node_modules/},
-            {test: '/\.js$/', loader: 'babel-loader', exclude: /node_modules/},
+            {test: '/\.js$/', loader: 'babel-loader', exclude: [/node_modules/, path.resolve(__dirname, 'src/js/config/paths.js')]},
             {test: /\.less$/, use: ['style-loader',MiniCssExtractPlugin.loader, {loader: 'css-loader', options: {importLoaders: 1}}, 'less-loader']},
             {test: /\.css$/, use: ['style-loader',MiniCssExtractPlugin.loader, {loader: 'css-loader', options: {importLoaders: 1}}]},
             {test: /\.(png|jpg|jpeg|gif|svg)$/, loaders: ['url-loader?limit=1&name=assets/[name]-[hash:5].[ext]', 'image-webpack-loader'] },

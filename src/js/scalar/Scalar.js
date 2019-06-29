@@ -18,6 +18,12 @@ let Scalar = {
         this.config = config;
         this.system.config = config;
         return this;
+    },
+
+    getRequest: function(endPoint, remoteMethod) {
+        let request = _.get(this, endPoint + '.' + remoteMethod);
+        let context = _.get(this, endPoint);
+        return request.bind(context);
     }
 };
 

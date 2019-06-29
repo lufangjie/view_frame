@@ -7,8 +7,8 @@ const DEV_IP = 'localhost';
 const DEV_PORT = '9011';
 const DEV_SOCKET_PORT = '9011';
 // 生产环境
-const PRO_IP = 'wx.gisocn.com';
-const PRO_PORT = '58080';
+const PRO_IP = 'localhost';
+const PRO_PORT = '9011';
 const PRO_SOCKET_PORT = '9011';
 
 let config = {
