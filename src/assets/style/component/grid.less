@@ -1,0 +1,167 @@
+#grid_container {
+  font-size: 12px;
+  padding: 0 20px;
+  height: 100%;
+
+  @grid_title_height: 56px;
+  @grid_search_height: 40px;
+  @grid_search_tools: 40px;
+
+  & > input {
+    margin-left: 10px;
+  }
+
+  .sr-label {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .btn, .btn-sm, .form-control, .input-sm {
+    margin-right: 10px;
+  }
+  .btn > i {
+    font-size: 12px;
+    margin: 0 5px 0 0;
+  }
+
+  .grid_title {
+    height: @grid_title_height;
+    font-size: 18px;
+    line-height: @grid_title_height;
+    color: #64a0e6;
+    text-shadow: 1px 1px 5px #c3c3c3;
+  }
+
+  .grid_search {
+    height: @grid_search_height;
+
+    .form-control {
+      margin-right: 10px;
+    }
+  }
+
+  .grid_tools {
+    height: @grid_search_tools;
+  }
+
+  // 表格
+  .grid_list {
+    border: solid 1px #ddd;
+
+    .table_box {
+      background-color: #ffffff;
+    }
+
+    .table_body {
+      position: relative;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      .table {
+        margin-bottom: 0;
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+
+        tr {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+        }
+        thead {
+          tr {
+            border-bottom: 1px solid #d1d1d1;
+            color: #707070;
+            font-weight: normal;
+            background: #f2f2f2;
+            background-image: -webkit-gradient(linear,left 0,left 100%,from(#f8f8f8),to(#ececec));
+            background-image: -webkit-linear-gradient(top,#f8f8f8,0%,#ececec,100%);
+            background-image: -moz-linear-gradient(top,#f8f8f8 0,#ececec 100%);
+            background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8',endColorstr='#ffececec',GradientType=0);
+
+            th {
+              border-color: #DDD;
+              font-weight: bold;
+              vertical-align: middle;
+              padding: 0 5px;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              line-height: 32px;
+              color: #000;
+
+              a {
+                font-weight: normal;
+                color:#000;
+                &.iconfont {
+                  font-size: 12px;
+                  font-weight: bolder;
+                }
+                &:hover {
+                  text-decoration: none;
+                }
+                &:focus {
+                  outline: none;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+
+        tbody {
+          display: block;
+          overflow-x: hidden;
+          overflow-y: auto;
+          border-bottom: solid 1px #ddd;
+
+          tr {
+
+            td {
+              vertical-align: middle;
+              padding: 0 5px;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              line-height: 32px;
+
+              &:last-child {
+                a {
+                  margin-left: 8px;
+                  &:first-child {
+                    margin-left: 0;
+                  }
+                }
+              }
+              a {
+                cursor: pointer;
+              }
+              a:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+
+      th.center, td.center {
+        text-align: center;
+      }
+      .center,
+      .align-center {
+        text-align: center !important;
+      }
+
+      .table-bordered {
+        border: none;
+      }
+    }
+
+    @import "pagination.less";
+  }
+
+}

@@ -1,0 +1,224 @@
+/* 模态框 开始 */
+.modal {
+  .report_box {
+    .report_head {
+      text-align: center;
+      #re-table-name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      #re-new-report-time {
+        font-size: 14px;
+      }
+    }
+    .report_main {
+      font-size: 14px;
+      p {
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px 0;
+      }
+      .line {
+        border-bottom: 1px solid #d1d1d1;
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .zjnr_table_div {
+        thead > tr > th {
+          font-size: 14px;
+          padding: 5px 10px;
+        }
+        tbody > tr > td {
+          font-size: 14px;
+          padding: 5px 10px;
+
+        }
+      }
+    }
+  }
+  .table_box, .page_box .pagination {
+    box-shadow: none
+  }
+
+  .info-box {
+    padding: 0 30px;
+    .curr_box {
+      display: inline-block;
+      width: 100%;
+      .half {
+        width: 50%;
+        float: left;
+      }
+      label {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        text-align: right;
+        width: 80px;
+        margin-right: 10px;
+      }
+      input, select, textarea {
+        width: calc(~"100% - 120px");
+        display: inline;
+        vertical-align: middle;
+      }
+      input, select {
+        height: @btn-height;
+      }
+      textarea {
+        height: @btn-height * 2;
+      }
+      input[type=checkbox], input[type=radio] {
+        width: initial;
+        margin: 0 5px 0 15px;
+      }
+      input[type=button] {
+        width: 30%;
+        height: @btn-height;
+      }
+    }
+  }
+
+  // 质检任务定义
+  .task_add_max {
+    .task_search_box {
+      width: 60%;
+      height: 40px;
+      margin: 0 auto;
+    }
+    .task-colum-list {
+      width: 100%;
+      table {
+        margin: 20px 0;
+        thead > tr > th, tbody > tr > td, tfoot > tr > td {
+          text-align: center;
+        }
+
+        thead > tr > th {
+          background-color: #49a5db;
+          color: #ffffff;
+        }
+      }
+      a.bt-sz {
+        border: 1px solid @primary_color;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 4px;
+        color: @primary_color;
+        &:hover {
+          text-decoration: none;
+          color: @link_hover_color;
+        }
+      }
+    }
+  }
+  // 规则定义
+  .rule_colum_box {
+    .rule_search_box {
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      span {
+        line-height: 40px;
+      }
+    }
+    .rule-colum-list {
+      width: 100%;
+      table {
+        margin: 20px 0;
+        thead > tr > th, tbody > tr > td, tfoot > tr > td {
+          text-align: center;
+        }
+        thead > tr > th {
+          background-color: #49a5db;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  /** 数据质检 表格 **/
+  .sr-input {
+    float: right;
+  }
+  .sr-label {
+    height: 30px;
+    line-height: 30px;
+    float: right;
+  }
+  .sr-select {
+    width: 120px !important;
+    height: 30px;
+    float: right;
+    font-size: 12px;
+  }
+  .sr-input-l {
+    float: left;
+    width: 120px;
+    margin-right: 25%;
+    margin-top: 2px;
+  }
+  .sr-label-l {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    font-size: 12px;
+  }
+  .sr-select-l {
+    width: 120px !important;
+    height: 30px;
+    float: left;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .sr-btn {
+    float: right;
+  }
+}
+
+.modal-header, .modal-footer {
+  padding: 10px 15px;
+}
+
+.modal-header{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  min-height: 24px;
+  background: #f7f7f7;
+  background-image: -webkit-gradient(linear, left 0, left 100%, from(#fff), to(#eee));
+  background-image: -webkit-linear-gradient(top, #fff, 0%, #eee, 100%);
+  background-image: -moz-linear-gradient(top, #fff 0, #eee 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #eee 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0);
+  color: #669fc7;
+  border: 1px solid #CCC;
+  border-bottom: 1px solid #DDD;
+  padding-left: 12px;
+}
+/* 模态框 结束 */
+
+/* 提示框 样式 */
+.alert {
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 0 0 0 20px;
+  line-height: 50px;
+  font-size: 18px;
+
+  button.close {
+    line-height: 50px;
+    padding-right: 20px
+  }
+}
+/* 提示框 样式 */

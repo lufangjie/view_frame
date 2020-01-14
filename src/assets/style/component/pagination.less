@@ -1,0 +1,45 @@
+// 分页
+.page_box {
+  height: @page_box_height;
+  padding: 0 20px 0 0;
+
+  #page_size {
+    height: 25px;
+    margin-top: 6px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  #result {
+    display: inline-block;
+    height: @page_box_height;
+    line-height: @page_box_height;
+  }
+
+  div.pagination {
+    border-radius: 0px;
+    margin: 0 0;
+    line-height: 40px;
+
+    div {
+      display: inline-block;
+      margin: 0 5px;
+      span {
+        cursor: pointer;
+      }
+    }
+
+    div.disabled {
+      span {
+        cursor: not-allowed;
+      }
+    }
+
+    input#current_page {
+      width: 25px;
+      height: 20px;
+      margin: 0 5px;
+    }
+
+  }
+}
