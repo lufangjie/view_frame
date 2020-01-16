@@ -1,26 +1,26 @@
 import _ from 'lodash';
 import Base from '@lib/js/ui/view/WrapView';
-import Elements from '@js/components/grid/elements';
 import Table from '@js/components/grid/table';
+import { TYPE, Label, Title, Button, Select, Input } from '@js/components/elements';
 
 let _createElement = function(item) {
     let element;
     switch (item.type) {
-        case Elements.TYPE.TITLE:
-            element = Elements.Title.new(item);
+        case TYPE.TITLE:
+            element = Title.new(item);
             break;
-        case Elements.TYPE.LABEL:
-            element = Elements.Label.new(item);
+        case TYPE.LABEL:
+            element = Label.new(item);
             break;
-        case Elements.TYPE.INPUT:
-            element = Elements.Input.new(item);
+        case TYPE.INPUT:
+            element = Input.new(item);
             break;
-        case Elements.TYPE.SELECT:
-            element = Elements.Select.new(item);
+        case TYPE.SELECT:
+            element = Select.new(item);
             break;
-        case Elements.TYPE.BUTTON:
-        case Elements.TYPE.SUBMIT:
-            element = Elements.Button.new(item);
+        case TYPE.BUTTON:
+        case TYPE.SUBMIT:
+            element = Button.new(item);
             break;
         default:
             break;
@@ -230,7 +230,7 @@ let Grid = Base.extend({
  *   columns        Array         grid数据行配置信息
  *   page           Object        grid的分页配置
  *                                           {
- *                                              pageEnable: Boolean 是否分页，默认值：true
+ *                                              enable: Boolean 是否分页，默认值：true
  *                                              pageSize：int          每页显示记录数，默认值：10
  *                                              pageIndex：int         当前页数，默认值：1
  *                                            }

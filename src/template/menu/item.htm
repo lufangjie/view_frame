@@ -1,0 +1,10 @@
+<% if(data.router) { %>
+<a href="<%= '#' + data.router %>">
+<% } else { %>
+<a href="javascript:void(0)">
+<% } %>
+    <span><%= data.name %></span>
+    <% if (data.hasChild) { %>
+        <i class="glyphicon glyphicon-chevron-down"></i>
+    <% } %>
+</a>
